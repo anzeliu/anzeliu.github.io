@@ -1,9 +1,168 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 
-<body>
-    <h1>Hello World</h1>
-    <p>I'm hosted with GitHub Pages.</p>
+<head>
+    <title>Portfolio Home</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static '/vendors/bootstrap/css/bootstrap.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}" />
+
+    <script src="{% static '/vendors/jquery/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static '/vendors/jquery-ui/jquery-ui.min.js' %}"></script>
+    <script src="{% static '/scripts/UploadToDataBaseExample.js' %}"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        .header {
+            width: 100%;
+            height: 4vh;
+            background-color: #B4B5BE;
+            box-shadow: 0 2px 6px -1px #b2b8ad;
+            position: fixed;
+        }
+        
+        .introduction {
+            height: 40vh;
+            background-color: #B18742;
+        }
+        
+        .major {
+            height: 8vh;
+            width: 75%;
+            background-color: #635B6C;
+        }
+        
+        .about {}
+        
+        .circle {
+            width: 25vw;
+            height: 25vh;
+            background: #635B6C;
+            border-radius: 50%;
+            text-align: center;
+        }
+        
+        .EECS {
+            padding-top: 5vh;
+        }
+        
+        .biography {}
+        
+        .coding {}
+        
+        .demoReel {}
+        
+        .btn {
+            background-color: #B4B5BE;
+        }
+        
+        h1 {
+            font-size: 2vh;
+            font-family: Raleway;
+        }
+        
+        h1:hover {
+            color: #544D5C;
+        }
+        
+        h2 {
+            color: #2B272F;
+            font-family: YuMincho;
+            font-size: 8vh;
+            text-align: center;
+        }
+        
+        h3 {
+            color: #ffffff;
+            font-family: YuMincho;
+            font-size: 3.2vh;
+            text-align: center;
+            padding-top: 2vh;
+        }
+        
+        h4 {
+            color: #ffffff;
+            font-family: YuMincho;
+            font-size: 3.2vh;
+            text-align: center;
+            padding-top: 2vh;
+        }
+    </style>
+</head>
+
+<body style="overflow-x: hidden; background-color: #333738;">
+    <div class="container-fluid">
+        <div class="row header align-items-center justify-content-center">
+            <div class="col text-center">
+                <button class="btn"> <h1> About </h1> </button>
+            </div>
+            <div class="col text-center">
+                <button class="btn"> <h1> Coding Portfolio </h1> </button>
+            </div>
+            <div class="col text-center">
+                <button class="btn"> <h1> Demo Reel </h1> </button>
+            </div>
+            <div class="col text-center">
+                <button class="btn"> <h1> Github </h1> </button>
+            </div>
+            <div class="col text-center">
+                <button class="btn"> <h1> Linkedin </h1> </button>
+            </div>
+            <div class="col text-center">
+                <button class="btn"> <h1> Resume </h1> </button>
+            </div>
+            <div class="col text-center">
+                <button class="btn"> <h1> Contact </h1> </button>
+            </div>
+        </div>
+        <div class="row introduction align-items-center justify-content-center">
+            <div class="col text-center">
+                <div class="row align-items-center justify-content-center">
+                    <h2> Anze Liu </h2>
+                </div>
+                <div class="row align-items-center justify-content-center">
+                    <div class="major">
+                        <h3> Electrical Engineer, Computer Scientist, Artist </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row about align-items-center justify-content-center">
+            <div class="col text-center">
+                <div class="row align-items-center justify-content-center">
+                    <h4> About Me</h4>
+                </div>
+                <div class="row align-items-center justify-content-center">
+                    <div class="circle">
+                        <h3 class="EECS"> Electrical Engineer and Computer Scientist</h3>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="coding">
+        </div>
+        <div class="demoReel">
+        </div>
 </body>
+<script>
+    $("#contribute").click(function() {
+        location.href = "language";
+    });
+
+    $("#gallery").click(function() {
+        location.href = "gallery";
+    });
+
+    $("#instructions").click(function() {
+        location.href = "instructions";
+    });
+</script>
 
 </html>
