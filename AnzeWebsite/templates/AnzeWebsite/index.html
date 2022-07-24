@@ -19,32 +19,9 @@
             font-family: "YuMincho";
             font-weight: 500;
             font-size: 4.6em;
-            opacity: 0.75;
-            color: #1b1211;
+            color: #FFFFFF;
             letter-spacing: 0.6vw;
             text-align: center;
-        }
-        
-        button {
-            color: #1B1211;
-            background-color: #B9B9AE;
-            border-color: #B9B9AE;
-            opacity: 0.95;
-            border: 1px hidden;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        }
-        
-        button:hover {
-            color: #1B1211;
-            background-color: #9F9F93;
-            border-color: #B9B9AE;
-            opacity: 0.95;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        }
-        
-        button:focus {
-            outline: none;
-            border: 1px solid #524b47;
         }
         
         h4 {
@@ -56,8 +33,7 @@
         
         html,
         body {
-            background-image: url(./../static/images/landing-1.png);
-            background-repeat: repeat-x;
+            background-color: #FFFFFF;
             height: 100%;
         }
         
@@ -77,25 +53,80 @@
         #intro {
             margin-top: 6.5vh;
         }
+
+        .menu{
+
+            margin: 0;
+            display: flex;
+            /* Works well with 100% width  */
+            width: 32.05em;
+            font-size: 1.5em;
+            padding: 0 2.85em;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--bgColorMenu);
+            
+        }
+        
+        .menu__item{
+            
+            all: unset;
+            flex-grow: 1;
+            z-index: 100;
+            display: flex;
+            cursor: pointer;
+            position: relative;
+            border-radius: 50%;
+            align-items: center;
+            will-change: transform;
+            justify-content: center;
+            padding: 0.55em 0 0.85em;
+            transition: transform var(--timeOut , var(--duration));
+            
+        }
+        
+        .menu__item::before{
+            
+            content: "";
+            z-index: -1;
+            width: 4.2em;
+            height: 4.2em;
+            border-radius: 50%;
+            position: absolute;
+            transform: scale(0);
+            transition: background-color var(--duration), transform var(--duration);
+            
+        }
+        
+        
+        .menu__item.active {
+        
+            transform: translate3d(0, -.8em , 0);
+        
+        }
+    
     </style>
 </head>
 
 <body style="overflow-x: hidden; background-color: #333738;">
     <div class="container-fluid">
-        <div class="row header align-items-center justify-content-center">
-            <div class="col text-center">
-                <button class="btn"> <h1> About </h1> </button>
-            </div>
-            <div class="col text-center">
-                <button class="btn"> <h1> Projects </h1> </button>
-            </div>
-            <div class="col text-center">
-                <button class="btn"> <h1> Resume </h1> </button>
-            </div>
-            <div class="col text-center">
-                <button class="btn"> <h1> Contact </h1> </button>
-            </div>
-        </div>
+
+        <menu class="menu">
+            <button class="menu__item active">
+                <h1> About </h1> 
+            </button>
+            <button class="menu__item active">
+                <h1> Projects </h1>
+            </button>
+            <button class="menu__item active">
+                <h1> Resume </h1>
+            </button>
+            <button class="menu__item active">
+                <h1> Contact </h1>
+            </button>
+        </menu>
+
         <div class="row introduction align-items-center justify-content-center">
             <div class="col text-center">
                 <div class="row align-items-center justify-content-center">
@@ -103,7 +134,7 @@
                 </div>
                 <div class="row align-items-center justify-content-center">
                     <div class="major">
-                        <h3> Electrical Engineer, Computer Scientist, Artist </h3>
+                        <h3> Engineer, Computer Scientist, Artist </h3>
                     </div>
                 </div>
             </div>
@@ -111,13 +142,7 @@
         <div class="row about align-items-center justify-content-center">
             <div class="col text-center">
                 <div class="row align-items-center justify-content-center">
-                    <h4> About Me</h4>
-                </div>
-                <div class="row align-items-center justify-content-center">
-                    <div class="circle">
-                        <h3 class="EECS"> Electrical Engineer and Computer Scientist</h3>
-                    </div>
-
+                    <h4> Introduction Letter </h4>
                 </div>
             </div>
         </div>
