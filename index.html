@@ -23,7 +23,7 @@
         
         h2 {
             font-family: YuMincho;
-            font-size: 96px;
+            font-size: 3em;
             font-weight: 800;
             line-height: 144px;
             letter-spacing: 0em;
@@ -91,8 +91,21 @@
             width: 30%;
         }
         
+        introductionLetter {
+            position: relative;
+            width: 100%;
+            background-color: #F7F7F6;
+            border-width: .3vh;
+            border-style: solid;
+            border-color: #A1D0EA;
+        }
+        
         introductionLetter p {
             font-size: 1.5em;
+        }
+        
+        signature p {
+            font-size: 0.5em;
         }
     </style>
 </head>
@@ -115,23 +128,23 @@
             </button>
         </menu>
 
-        <div class="row align-items-center justify-content-center">
-            <div class="col-2">
-                <div class="row align-items-center justify-content-center">
-                    <h2> Anze Liu </h2>
+        <statementPlate>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2> Anze Liu </h2>
+                    </div>
+                    <!-- <div class="col-md-6 offset-md-4">
+                        <img src="/static/images/Anze.png">
+                    </div> -->
                 </div>
-                <div class="row align-items-center justify-content-center">
-                    <div class="career">
+                <div class="row">
+                    <div class="col-md-6">
                         <h3> Engineer, Computer Scientist, Artist </h3>
                     </div>
                 </div>
             </div>
-
-            <!-- <div class="col-3">
-                <img src="/static/images/Anze.png">
-            </div> -->
-
-        </div>
+        </statementPlate>
 
         <introductionLetter>
             <div class="container">
@@ -139,7 +152,7 @@
                     <div class="col-md-4">
                         <h3> Introduction Letter </h3>
                     </div>
-                    <div class="col-md-8 offset-md-3">
+                    <div class="col-md-8">
                         <p> Hello! Welcome to my portfolio website. </p>
                         <p> My name is Anze Liu. </p>
                         <p> I am currently a fourth year undergraduate at UC Berkeley studying Electrical Engineering and Computer Sciences. </p>
@@ -150,7 +163,66 @@
             </div>
         </introductionLetter>
 
-    </div>
+        <skills>
+            <div class="container text-center">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-4">
+
+                    </div>
+                    <div class="col-md-4">
+
+                    </div>
+                </div>
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-4">
+
+                    </div>
+                    <div class="col-md-4">
+
+                    </div>
+                </div>
+            </div>
+        </skills>
+
+        <projects>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3> Projects </h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+
+                    </div>
+                    <div class="col-md-4">
+
+                    </div>
+                    <div class="col-md-4">
+
+                    </div>
+                </div>
+            </div>
+        </projects>
+
+        <contact>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+
+                    </div>
+                    <div class="col-md-6">
+
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <signature>
+                        <p> Website deisgned by Anze Liu </p>
+                    </signature>
+                </div>
+        </contact>
+
+        </div>
 </body>
 
 <script>
