@@ -110,28 +110,43 @@
         }
         
         #projects {
+            text-align: center;
+            align-items: center;
             background-color: #6C9588;
             display: flex;
-            padding-top: 0;
+            padding-top: 10%;
             padding-right: 10%;
-            padding-bottom: 0;
+            padding-bottom: 10%;
             padding-left: 10%;
+        }
+        
+        .wrapper {
+            display: grid;
+            text-align: center;
+            grid-template-columns: 35% 35% 35%;
+            grid-gap: 20%;
         }
         
         #contact {
             background-color: #A1D0EA;
             display: flex;
-            padding-top: 6%;
+            padding-top: 4%;
             padding-right: 10%;
-            padding-bottom: 6%;
+            padding-bottom: 10%;
             padding-left: 10%;
+        }
+        
+        #bottomPlate {
+            background-color: #A1D0EA;
+            text-align: center;
+            color: #F7F7F6;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="container-fluid" style="padding-top: 1%">
+    <div style="padding-top: 1%">
         <div class="row align-items-center justify-content-center">
             <ul class="nav navbar text-center" style="width:100%">
                 <div class="col">
@@ -157,13 +172,10 @@
             </ul>
         </div>
 
-        <div class="container-fluid" id="statementPlate">
+        <div id="statementPlate">
             <div class="row justify-content-start">
                 <div class="col-4">
                     <h2> Anze Liu </h2>
-                </div>
-                <div class="col-md-6 offset-md-4">
-                    <img src="/static/images/Anze.png">
                 </div>
             </div>
             <div class="row justify-content-start">
@@ -171,15 +183,18 @@
                     <h3> Engineer, Computer Scientist, Artist </h3>
                 </div>
             </div>
+            <div class="col-md-6 offset-md-4">
+                <img src="static/images/Anze.png"></img>
+            </div>
         </div>
 
-        <div class="container-fluid" id="introductionLetterBackground">
+        <div id="introductionLetterBackground">
             <div class="container-fluid" id="introductionLetter">
-                <div class="col-md-3" id="introductionLetterTitle" style="width:50%">
+                <div class="col-3" id="introductionLetterTitle" style="width:50%">
                     <h3> Introduction </h3>
                     <h3> Letter </h3>
                 </div>
-                <div class="col-md-8" style="width:100%">
+                <div class="col-8" style="width:100%">
                     <p> Hello! Welcome to my portfolio website. </p>
                     <p> My name is Anze Liu. </p>
                     <p> I am currently a fourth year undergraduate at UC Berkeley studying Electrical Engineering and Computer Sciences. </p>
@@ -190,59 +205,47 @@
 
         </div>
 
-        <div class="container-fluid text-center" id="skills">
+        <div id="skills">
             <div class="row align-items-center justify-content-center">
-                <div class="col-md-4">
-
-                </div>
-                <div class="col-md-4">
-
-                </div>
-            </div>
-            <div class="row align-items-center justify-content-center">
-                <div class="col-md-4">
-
-                </div>
-                <div class="col-md-4">
-
-                </div>
-            </div>
-        </div>
-
-        <div class="container-fluid text-center" id="projects">
-            <div class="row">
-                <div class="col-md-4">
-                    <h3> Projects </h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-
-                </div>
-                <div class="col-md-4">
-
-                </div>
-                <div class="col-md-4">
-
-                </div>
-            </div>
-        </div>
-
-        <div class="container-fluid" id="contact">
-            <div class="row">
                 <div class="col-4">
-                    <h3> Contact </h3>
+
                 </div>
                 <div class="col-4">
-                    <h3> More Relevant Sites </h3>
+
                 </div>
             </div>
-            <div class="row text-center">
-                <div class="col">
-                    <p> Website deisgned by Anze Liu </p>
+            <div class="row align-items-center justify-content-center">
+                <div class="col-4">
+
+                </div>
+                <div class="col-4">
+
                 </div>
             </div>
         </div>
+
+        <div class="row" id="projects">
+            <div class="col-4">Computer Science</div>
+            <div class="col-4">3D Modeling & Animation</div>
+            <div class="col-4">Electrical Engineering</div>
+        </div>
+
+
+        <div class="row" id="contact">
+            <div class="col-6">
+                <h3> Contact </h3>
+            </div>
+            <div class="col-6">
+                <h3> More Relevant Sites </h3>
+            </div>
+        </div>
+
+        <div class="row text-center" id="bottomPlate">
+            <div class="col">
+                <p> Website deisgned by Anze Liu </p>
+            </div>
+        </div>
+    </div>
 </body>
 
 <script>
