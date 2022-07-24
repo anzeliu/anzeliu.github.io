@@ -54,7 +54,7 @@ ROOT_URLCONF = 'AnzeWebsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [ '/Users/anzeliu/Desktop/Website/anzeliu.github.io/AnzeWebsite' + '/templates/'],
+        'DIRS': [ '/Users/anzeliu/Desktop/Website/anzeliu.github.io/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

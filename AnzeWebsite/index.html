@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -12,7 +11,7 @@
 
     <style type="text/css">
         .header {
-            background-color: #FFFFFF; 
+            background-color: #FFFFFF;
         }
         
         .title {
@@ -29,7 +28,14 @@
             font-size: 2em;
             color: #000000;
         }
-
+        
+        h2 {
+            background-color: #FFFFFF;
+            font-family: "Raleway";
+            font-weight: 400;
+            font-size: 2em;
+        }
+        
         h4 {
             font-family: "Raleway";
             font-weight: 400;
@@ -43,13 +49,6 @@
             height: 100%;
         }
         
-        h2 {
-            background-color: #FFFFFF;
-            font-family: "Raleway";
-            font-weight: 400;
-            font-size: 2em;
-        }
-        
         .container {
             margin-top: 11vh;
         }
@@ -57,17 +56,17 @@
         #intro {
             margin-top: 6.5vh;
         }
-
-        .menu{
+        
+        .menu {
             margin: 0;
             display: flex;
             width: 100%;
             position: relative;
             align-items: center;
-            justify-content: center;            
+            justify-content: center;
         }
         
-        .menu__item{
+        .menu__item {
             all: unset;
             flex-grow: 1;
             z-index: 100;
@@ -78,31 +77,21 @@
             align-items: center;
             will-change: transform;
             justify-content: center;
-            padding: 0.55em 0 0.85em;
-            transition: transform var(--timeOut , var(--duration));
-            
+            padding: 0.80em 0 0.80em;
         }
         
-        .menu__item::before{
-            
+        .menu__item::before {
             content: "";
             z-index: -1;
             width: 4.2em;
             height: 4.2em;
             border-radius: 50%;
             position: absolute;
-            transform: scale(0);
-            transition: background-color var(--duration), transform var(--duration);
-            
         }
-        
         
         .menu__item.active {
-        
-            transform: translate3d(0, -.8em , 0);
-        
+            transform: translate3d(0, -.8em, 0);
         }
-    
     </style>
 </head>
 
