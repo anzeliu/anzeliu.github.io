@@ -91,21 +91,22 @@
             width: 30%;
         }
         
-        introductionLetter {
-            position: relative;
-            width: 100%;
+        #introductionLetter {
             background-color: #F7F7F6;
-            border-width: .3vh;
-            border-style: solid;
+            border-radius: 5em;
             border-color: #A1D0EA;
         }
         
-        introductionLetter p {
-            font-size: 1.5em;
+        #skills {
+            background-color: colorscheme("Cultured");
         }
         
-        signature p {
-            font-size: 0.5em;
+        #projects {
+            background-color: colorscheme("Wintergreen Dream")
+        }
+        
+        #contact {
+            background-color: colorscheme("Light Cornflower Blue")
         }
     </style>
 </head>
@@ -128,106 +129,101 @@
             </button>
         </menu>
 
-        <statementPlate>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h2> Anze Liu </h2>
-                    </div>
-                    <!-- <div class="col-md-6 offset-md-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2> Anze Liu </h2>
+                </div>
+                <!-- <div class="col-md-6 offset-md-4">
                         <img src="/static/images/Anze.png">
                     </div> -->
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <h3> Engineer, Computer Scientist, Artist </h3>
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3> Engineer, Computer Scientist, Artist </h3>
                 </div>
             </div>
-        </statementPlate>
+        </div>
 
-        <introductionLetter>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h3> Introduction Letter </h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8 offset-md-4">
-                        <p> Hello! Welcome to my portfolio website. </p>
-                        <p> My name is Anze Liu. </p>
-                        <p> I am currently a fourth year undergraduate at UC Berkeley studying Electrical Engineering and Computer Sciences. </p>
-                        <p> I have experience and interest in software development, machine learning, 3D animated films, circuit design, and more! </p>
-                        <p> In my spare time, I wander in nature, read books, and dance ballet. </p>
-                    </div>
+        <div class="container" id="introductionLetter">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3> Introduction Letter </h3>
                 </div>
             </div>
-        </introductionLetter>
-
-        <skills>
-            <div class="container text-center">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-md-4">
-
-                    </div>
-                    <div class="col-md-4">
-
-                    </div>
-                </div>
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-md-4">
-
-                    </div>
-                    <div class="col-md-4">
-
-                    </div>
+            <div class="row">
+                <div class="col-md-8 offset-md-4">
+                    <p> Hello! Welcome to my portfolio website. </p>
+                    <p> My name is Anze Liu. </p>
+                    <p> I am currently a fourth year undergraduate at UC Berkeley studying Electrical Engineering and Computer Sciences. </p>
+                    <p> I have experience and interest in software development, machine learning, 3D animated films, circuit design, and more! </p>
+                    <p> In my spare time, I wander in nature, read books, and dance ballet. </p>
                 </div>
             </div>
-        </skills>
+        </div>
 
-        <projects>
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h3> Projects </h3>
-                    </div>
+        <div class="container text-center" id="skills">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-4">
+
                 </div>
-                <div class="row">
-                    <div class="col-md-4">
+                <div class="col-md-4">
 
-                    </div>
-                    <div class="col-md-4">
-
-                    </div>
-                    <div class="col-md-4">
-
-                    </div>
                 </div>
             </div>
-        </projects>
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-4">
 
-        <contact>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-
-                    </div>
-                    <div class="col-md-6">
-
-                    </div>
                 </div>
-                <div class="row text-center">
-                    <signature>
-                        <p> Website deisgned by Anze Liu </p>
-                    </signature>
-                </div>
-        </contact>
+                <div class="col-md-4">
 
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center" id="projects">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3> Projects </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-4">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="contact">
+            <div class="row">
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-6">
+
+                </div>
+            </div>
+            <div class="row text-center">
+                <p> Website deisgned by Anze Liu </p>
+            </div>
         </div>
 </body>
 
 <script>
+    const colorscheme = {
+        "Wintergreen Dream": "6C9588",
+        "Light Cornflower Blue": "A1D0EA",
+        "Cultured": "F7F7F6",
+        "Baby Pink": "EEC7CD",
+        "Quick Silver": "A19FA1"
+    }
+
     $("#Projects").click(function() {
         location.href = "Projects";
     });
