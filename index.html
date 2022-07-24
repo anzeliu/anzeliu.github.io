@@ -1,12 +1,17 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>Anze Liu Home</title>
+    <title>Genre</title>
 
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static '/vendors/bootstrap/css/bootstrap.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
 
     <style type="text/css">
@@ -17,7 +22,7 @@
         h1 {
             font-family: "Raleway";
             font-weight: 200;
-            font-size: 1.8em;
+            font-size: 2em;
             color: #000000;
         }
         
@@ -86,26 +91,61 @@
             position: absolute;
         }
         
+        ul.nav li.dropdown:hover ul.dropdown-menu {
+            display: block;
+        }
+        
         img {
             width: 30%;
         }
         
+        #statementPlate {
+            background-color: #ffffff;
+            padding-top: 0;
+            padding-right: 10%;
+            padding-bottom: 0;
+            padding-left: 10%;
+        }
+        
         #introductionLetter {
             background-color: #F7F7F6;
-            border-radius: 5em;
+            display: flex;
             border-color: #A1D0EA;
+            border-width: 20%;
+        }
+        
+        #introductionLetterTitle {
+            padding-top: 3%;
+            padding-right: 5%;
+            padding-bottom: 3%;
+            padding-left: 10%;
         }
         
         #skills {
             background-color: colorscheme("Cultured");
+            display: flex;
+            padding-top: 0;
+            padding-right: 10%;
+            padding-bottom: 0;
+            padding-left: 10%;
         }
         
         #projects {
-            background-color: colorscheme("Wintergreen Dream")
+            background-color: colorscheme("Wintergreen Dream");
+            display: flex;
+            padding-top: 0;
+            padding-right: 10%;
+            padding-bottom: 0;
+            padding-left: 10%;
         }
         
         #contact {
-            background-color: colorscheme("Light Cornflower Blue")
+            background-color: colorscheme("Light Cornflower Blue");
+            display: flex;
+            padding-top: 0;
+            padding-right: 10%;
+            padding-bottom: 0;
+            padding-left: 10%;
         }
     </style>
 </head>
@@ -113,55 +153,64 @@
 <body style="overflow-x: hidden; background-color: #FFFFFF;">
     <div class="container-fluid">
 
-        <menu class="menu">
-            <button class="menu_item">
-                <h1> About </h1> 
-            </button>
-            <button class="menu_item">
-                <h1> Projects </h1>
-            </button>
-            <button class="menu_item">
-                <h1> Resume </h1>
-            </button>
-            <button class="menu_item">
-                <h1> Contact </h1>
-            </button>
-        </menu>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <div class="col">
+                            <a href="#" role="button" aria-haspopup="true" aria-expanded="false">Anze<span class="caret"></span></a>
+                        </div>
+                        <div class="col">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Computer Science</a></li>
+                                <li><a href="#">3D Modeling & Animation</a></li>
+                                <li><a href="#">Electrical Engineering</a></li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <a href="#" role="button" aria-haspopup="true" aria-expanded="false">Resume <span class="caret"></span></a>
+                        </div>
+                        <div class="col">
+                            <a href="#" role="button" aria-haspopup="true" aria-expanded="false">Contact <span class="caret"></span></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container-fluid" id="statementPlate">
+            <div class="row justify-content-start">
+                <div class="col-4">
                     <h2> Anze Liu </h2>
                 </div>
                 <!-- <div class="col-md-6 offset-md-4">
                         <img src="/static/images/Anze.png">
                     </div> -->
             </div>
-            <div class="row">
-                <div class="col-md-6">
+            <div class="row justify-content-start">
+                <div class="col-6">
                     <h3> Engineer, Computer Scientist, Artist </h3>
                 </div>
             </div>
         </div>
 
-        <div class="container" id="introductionLetter">
-            <div class="row justify-content-start">
-                <div class="col-4">
-                    <h3> Introduction Letter </h3>
-                </div>
+        <div class="container-fluid" id="introductionLetter">
+            <div class="col-md-3" id="introductionLetterTitle" style="width:50%">
+                <h3> Introduction </h3>
+                <h3> Letter </h3>
             </div>
-            <div class="row justify-content-end">
-                <div class="col-8">
-                    <p> Hello! Welcome to my portfolio website. </p>
-                    <p> My name is Anze Liu. </p>
-                    <p> I am currently a fourth year undergraduate at UC Berkeley studying Electrical Engineering and Computer Sciences. </p>
-                    <p> I have experience and interest in software development, machine learning, 3D animated films, circuit design, and more! </p>
-                    <p> In my spare time, I wander in nature, read books, and dance ballet. </p>
-                </div>
+            <div class="col-md-8" style="width:100%">
+                <p> Hello! Welcome to my portfolio website. </p>
+                <p> My name is Anze Liu. </p>
+                <p> I am currently a fourth year undergraduate at UC Berkeley studying Electrical Engineering and Computer Sciences. </p>
+                <p> I have experience and interest in software development, machine learning, 3D animated films, circuit design, and more! </p>
+                <p> In my spare time, I wander in nature, read books, and dance ballet. </p>
             </div>
         </div>
 
-        <div class="container text-center" id="skills">
+        <div class="container-fluid text-center" id="skills">
             <div class="row align-items-center justify-content-center">
                 <div class="col-md-4">
 
@@ -180,7 +229,7 @@
             </div>
         </div>
 
-        <div class="container text-center" id="projects">
+        <div class="container-fluid text-center" id="projects">
             <div class="row">
                 <div class="col-md-4">
                     <h3> Projects </h3>
@@ -199,7 +248,7 @@
             </div>
         </div>
 
-        <div class="container" id="contact">
+        <div class="container-fluid" id="contact">
             <div class="row">
                 <div class="col-md-6">
                     <h3> Contact </h3>
