@@ -10,22 +10,16 @@
     <link rel="stylesheet" type="text/css" href="{% static '/vendors/bootstrap/css/bootstrap.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}" />
 
-    <script src="{% static '/vendors/jquery/jquery-3.3.1.min.js' %}"></script>
-    <script src="{% static '/vendors/jquery-ui/jquery-ui.min.js' %}"></script>
-    <script src="{% static '/scripts/UploadToDataBaseExample.js' %}"></script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
 
     <style type="text/css">
         .header {
-            background-color: rgba(208, 214, 202, 0.88);
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            background-color: #FFFFFF; 
         }
         
         .title {
-            font-family: "Raleway";
+            font-family: "YuMincho";
             font-weight: 500;
             font-size: 4.6em;
             opacity: 0.75;
@@ -96,16 +90,7 @@
                 <button class="btn"> <h1> About </h1> </button>
             </div>
             <div class="col text-center">
-                <button class="btn"> <h1> Coding Projects </h1> </button>
-            </div>
-            <div class="col text-center">
-                <button class="btn"> <h1> 3D Animation Demo Reel </h1> </button>
-            </div>
-            <div class="col text-center">
-                <button class="btn"> <h1> Github </h1> </button>
-            </div>
-            <div class="col text-center">
-                <button class="btn"> <h1> Linkedin </h1> </button>
+                <button class="btn"> <h1> Projects </h1> </button>
             </div>
             <div class="col text-center">
                 <button class="btn"> <h1> Resume </h1> </button>
@@ -144,17 +129,22 @@
         <div class="demoReel">
         </div>
 </body>
+
 <script>
-    $("#contribute").click(function() {
-        location.href = "language";
+    $("#Projects").click(function() {
+        location.href = "Projects";
     });
 
-    $("#gallery").click(function() {
-        location.href = "gallery";
+    $("#ComputerScience").click(function() {
+        location.href = "ComputerScience";
     });
 
-    $("#instructions").click(function() {
-        location.href = "instructions";
+    $("#3DModelingAniation").click(function() {
+        location.href = "3DModelingAniation";
+    });
+
+    $("#ElectricalEngineering").click(function() {
+        location.href = "ElectricalEngineering";
     });
 </script>
 
