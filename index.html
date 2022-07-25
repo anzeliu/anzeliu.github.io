@@ -45,7 +45,7 @@
         h4 {
             font-family: "Raleway";
             font-weight: 400;
-            font-size: 1.8em;
+            font-size: 1.7em;
             color: #1b1211;
             padding-top: 4%;
             padding-bottom: 4%;
@@ -61,7 +61,7 @@
             padding-top: 10%;
             padding-left: 0;
             padding-right: 0;
-            padding-bottom: 0;
+            padding-bottom: 1%;
             border-bottom: #000000;
             border-top: #FFFFFF;
             border-right: #FFFFFF;
@@ -129,9 +129,34 @@
             background-color: #6C9588;
             display: flex;
             padding-top: 10%;
-            padding-right: 8%;
+            padding-right: 5%;
             padding-bottom: 10%;
-            padding-left: 8%;
+            padding-left: 5%;
+        }
+        
+        #subject {
+            background-color: #F7F7F6;
+            text-align: center;
+            align-items: center;
+            width: 80%;
+        }
+        
+        #CS {
+            width: 30%;
+            background-size: cover;
+            background-image: url(static/images/code.png);
+        }
+        
+        #MA {
+            width: 30%;
+            background-size: cover;
+            background-image: url(static/images/Muffinaaa.png);
+        }
+        
+        #EE {
+            width: 30%;
+            background-size: cover;
+            background-image: url(static/images/EE.png);
         }
         
         #contact {
@@ -230,18 +255,26 @@
         </div>
 
         <div class="row align-items-center justify-content-center" id="projects">
-            <div class="col-4" id="ComputerScience">
-                <h4>Computer Science</h4>
+            <div class="col-md-4" id="CS">
+                <div class="row align-items-center" id="subject">
+                    <a href="#" id="navigation">
+                        <h4>Computer Science</h4>
+                    </a>
+                </div>
             </div>
-            <div class="col-4" id="3DModelingAnimation">
-                <h4>
-                    3D Modeling & Animation
-                </h4>
+            <div class="col-md-4" id="MA">
+                <div class="row align-items-center" id="subject">
+                    <a href="#" id="navigation">
+                        <h4>3D Modeling & Animation</h4>
+                    </a>
+                </div>
             </div>
-            <div class="col-4" id="ElectricalEngineering">
-                <h4>
-                    Electrical Engineering
-                </h4>
+            <div class="col-md-4" id="EE">
+                <div class="row align-items-center" id="subject">
+                    <a href="#" id="navigation">
+                        <h4>Electrical Engineering</h4>
+                    </a>
+                </div>
             </div>
         </div>
 
