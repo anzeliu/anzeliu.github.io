@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Genre</title>
+    <title>AnzeWebsite</title>
 
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -254,11 +254,11 @@
                 </div>
                 <div class="col">
                     <li class="dropdown">
-                        <a id="navigation" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects</a>
+                        <a id="navigation" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" id="navigation" href="#">Computer Science</a></li>
-                            <li><a class="dropdown-item" id="navigation" href="#">3D Modeling & Animation</a></li>
-                            <li><a class="dropdown-item" id="navigation" href="#">Electrical Engineering</a></li>
+                            <li><a class="dropdown-item" id="navigation" href="projects">Computer Science</a></li>
+                            <li><a class="dropdown-item" id="navigation" href="projects">3D Modeling & Animation</a></li>
+                            <li><a class="dropdown-item" id="navigation" href="projects">Electrical Engineering</a></li>
                         </ul>
                     </li>
                 </div>
@@ -322,38 +322,36 @@
             </div>
         </div>
 
-        <section class="blog">
-            <div class="container">
-                <!-- header of section -->
-                <div class="blog-head text-center">
-                    <h5>Projects</h5>
-                </div>
+        <section class="row align-items-center justify-content-center">
+            <!-- header of section -->
+            <div class="blog-head text-center">
+                <h5>Projects</h5>
+            </div>
 
-                <!-- blog items -->
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="item animated fadeIn">
-                            <img src="./static/images/code.png" id="CS">
-                            <button class="overlay fade-overlay btn">
+            <!-- blog items -->
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-3">
+                    <div class="item animated fadeIn" href="projects">
+                        <img src="./static/images/code.png">
+                        <button class="overlay fade-overlay btn">
                                 <div class="text">Computer Science</div>
                             </button>
-                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="item animated fadeIn">
-                            <img src="./static/images/MuffinaaaCrop.png" id="MA">
-                            <button class="overlay fade-overlay btn">
+                </div>
+                <div class="col-md-3">
+                    <div class="item animated fadeIn">
+                        <img src="./static/images/MuffinaaaCrop.png">
+                        <button class="overlay fade-overlay btn" id="MA">
                                 <div class="text">3D Modeling and Animation</div>
                             </button>
-                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="item animated fadeIn">
-                            <img src="./static/images/EECropped.png" id="EE">
-                            <button class="overlay fade-overlay btn">
+                </div>
+                <div class="col-md-3">
+                    <div class="item animated fadeIn">
+                        <img src="./static/images/EECropped.png">
+                        <button class="overlay fade-overlay btn" id="EE">
                                 <div class="text">Electrical Engineering</div>
                             </button>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -385,16 +383,16 @@
 
 <script>
     $("#CS").click(function() {
-        location.href = "./projects";
+        location.href = "projects";
     });
 
     $("#MA").click(function() {
-        location.href = "./projects";
+        location.href = "projects";
     });
 
 
     $("#EE").click(function() {
-        location.href = "./projects";
+        location.href = "projects";
     });
 </script>
 
