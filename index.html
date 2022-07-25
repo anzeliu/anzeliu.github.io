@@ -22,16 +22,16 @@
         h1 {
             font-family: "Raleway";
             font-weight: 200;
-            font-size: 2em;
+            font-size: 2rem;
             color: #000000;
         }
         
         h2 {
             font-family: YuMincho;
-            font-size: 3em;
+            font-size: 3rem;
             font-weight: 700;
             line-height: 144px;
-            letter-spacing: 0em;
+            letter-spacing: 0rem;
             color: #6C9588;
         }
         
@@ -45,10 +45,17 @@
         h4 {
             font-family: "Raleway";
             font-weight: 400;
-            font-size: 1.7em;
+            font-size: 1.7rem;
             color: #1b1211;
             padding-top: 4%;
             padding-bottom: 4%;
+        }
+        
+        h5 {
+            font-family: YuMincho;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #ffffff;
         }
         
         html,
@@ -81,7 +88,7 @@
         #navigation {
             color: #000000;
             text-align: center;
-            font-size: 1.2em;
+            font-size: 1.2rem;
         }
         
         #statementPlate {
@@ -99,7 +106,7 @@
             padding-bottom: 5%;
             padding-left: 2%;
             border-color: #A1D0EA;
-            border-width: 3em;
+            border-width: 3rem;
             border-style: solid;
         }
         
@@ -123,15 +130,6 @@
             text-align: center;
         }
         
-        #projects {
-            text-align: center;
-            align-items: center;
-            background-color: #6C9588;
-            display: flex;
-            padding-right: 5%;
-            padding-left: 5%;
-        }
-        
         #subject {
             background-color: #F7F7F6;
             text-align: center;
@@ -139,22 +137,9 @@
             width: 80%;
         }
         
-        #CS {
-            width: 33%;
-            background-size: cover;
-            background-image: url(static/images/code.png);
-        }
-        
-        #MA {
-            width: 33%;
-            background-size: cover;
-            background-image: url(static/images/Muffinaaa.png);
-        }
-        
-        #EE {
-            width: 33%;
-            background-size: cover;
-            background-image: url(static/images/EE.png);
+        .imgbox {
+            display: grid;
+            height: 100%;
         }
         
         #contact {
@@ -170,6 +155,91 @@
             background-color: #A1D0EA;
             text-align: center;
             color: #F7F7F6;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        section {
+            padding: 60px 0;
+            background-color: #6C9588;
+        }
+        
+        span,
+        a,
+        a:hover {
+            display: inline-block;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .blog img {
+            max-width: 100%;
+        }
+        
+        .blog-head {
+            margin-bottom: 70px;
+        }
+        
+        .overlay {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: #A19FA1;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            transition: .2s ease;
+        }
+        
+        .fade-overlay {
+            height: 100%;
+            opacity: 0;
+        }
+        
+        .item:hover .fade-overlay {
+            opacity: 0.95;
+        }
+        
+        .title-overlay {
+            height: auto;
+            top: auto;
+            opacity: 0;
+        }
+        
+        .item:hover .title-overlay {
+            opacity: 1;
+            height: auto;
+            padding: 50px 0;
+        }
+        
+        .text {
+            color: white;
+            font-size: 1.2vw;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        
+        button:hover {
+            color: #000000;
+            background-color: #A19FA1;
+            border-color: #6C9588;
+            opacity: 0.05;
+            box-shadow: #6C9588;
+        }
+        
+        button:focus {
+            outline: none;
+            border: 1px solid #6C9588;
         }
     </style>
 </head>
@@ -242,7 +312,7 @@
                 <p> HTML / CSS </p>
             </div>
             <div class="col-md-4" id="area">
-                <h4> Tools</h4>
+                <h4> Tools and Technologies </h4>
                 <p> Scikit-learn </p>
                 <p> IBM TPF </p>
                 <p> MATLAB </p>
@@ -252,31 +322,47 @@
             </div>
         </div>
 
-        <div class="row align-items-center justify-content-center" id="projects">
-            <div class="col-md-4">
-                <button class="btn btn-default">
-                    <img src="static/images/code.png" href="#" width="20">
-                    <h4>Computer Science</h4>
-               </button>
+        <section class="blog">
+            <div class="container">
+                <!-- header of section -->
+                <div class="blog-head text-center">
+                    <h5>Projects</h5>
+                </div>
+
+                <!-- blog items -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="item animated fadeIn">
+                            <img src="./static/images/code.png" id="CS">
+                            <button class="overlay fade-overlay btn">
+                                <div class="text">Computer Science</div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="item animated fadeIn">
+                            <img src="./static/images/MuffinaaaCrop.png" id="MA">
+                            <button class="overlay fade-overlay btn">
+                                <div class="text">3D Modeling and Animation</div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="item animated fadeIn">
+                            <img src="./static/images/EECropped.png" id="EE">
+                            <button class="overlay fade-overlay btn">
+                                <div class="text">Electrical Engineering</div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4">
-                <button class="btn btn-default">
-                    <img src="static/images/MuffinaaaCropped.png" href="#" width="20">
-                    <h4>3D Modeling & Animation</h4>
-               </button>
-            </div>
-            <div class="col-md-4">
-                <button class="btn btn-default">
-                    <img src="static/images/EECropped.png" href="#" width="20">
-                    <h4>Electrical Engineering</h4>
-               </button>
-            </div>
-        </div>
+        </section>
 
         <div id="contact" class="row align-items-center justify-content-center">
             <div class="col-md-4">
                 <h4> Contact </h4>
-                <p> More Relevant Sites </p>
+                <p> anzeliu0604@berkeley.edu </p>
             </div>
 
             <div class="col-md-4">
@@ -295,24 +381,20 @@
                 <p> Website deisgned by Anze Liu </p>
             </div>
         </div>
-    </div>
 </body>
 
 <script>
-    $("#Projects").click(function() {
-        location.href = "Projects";
+    $("#CS").click(function() {
+        location.href = "./projects";
     });
 
-    $("#ComputerScience").click(function() {
-        location.href = "ComputerScience";
+    $("#MA").click(function() {
+        location.href = "./projects";
     });
 
-    $("#3DModelingAniation").click(function() {
-        location.href = "3DModelingAniation";
-    });
 
-    $("#ElectricalEngineering").click(function() {
-        location.href = "ElectricalEngineering";
+    $("#EE").click(function() {
+        location.href = "./projects";
     });
 </script>
 
