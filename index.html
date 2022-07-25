@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Genre</title>
 
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
@@ -43,8 +45,10 @@
         h4 {
             font-family: "Raleway";
             font-weight: 400;
-            font-size: 2em;
+            font-size: 1.8em;
             color: #1b1211;
+            padding-top: 4%;
+            padding-bottom: 4%;
         }
         
         html,
@@ -54,7 +58,16 @@
         }
         
         #career {
-            padding: 0.80em 0 0.80em;
+            padding-top: 10%;
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 0;
+            border-bottom: #000000;
+            border-top: #FFFFFF;
+            border-right: #FFFFFF;
+            border-left: #FFFFFF;
+            border-width: 2%;
+            border-style: solid;
         }
         
         ul.nav li.dropdown:hover ul.dropdown-menu {
@@ -62,7 +75,7 @@
         }
         
         img {
-            width: 30%;
+            width: 100%;
         }
         
         #navigation {
@@ -76,28 +89,18 @@
             padding-top: 8%;
             padding-right: 10%;
             padding-bottom: 8%;
-            padding-left: 15%;
-        }
-        
-        #introductionLetterBackground {
-            background-color: #A1D0EA;
-            display: flex;
+            padding-left: 10%;
         }
         
         #introductionLetter {
             background-color: #F7F7F6;
             display: flex;
             padding-top: 5%;
-            padding-right: 5%;
             padding-bottom: 5%;
-            padding-left: 5%;
-        }
-        
-        #introductionLetterTitle {
-            padding-top: 3%;
-            padding-right: 5%;
-            padding-bottom: 3%;
-            padding-left: 10%;
+            padding-left: 2%;
+            border-color: #A1D0EA;
+            border-width: 3em;
+            border-style: solid;
         }
         
         #skills {
@@ -109,31 +112,35 @@
             padding-left: 10%;
         }
         
+        #area {
+            background-color: #F7F7F6;
+            width: 30%;
+            height: 30%;
+            border-color: #6C9588;
+            border-width: 0.1em;
+            border-style: solid;
+            margin: 2%;
+            text-align: center;
+        }
+        
         #projects {
             text-align: center;
             align-items: center;
             background-color: #6C9588;
             display: flex;
             padding-top: 10%;
-            padding-right: 10%;
+            padding-right: 8%;
             padding-bottom: 10%;
-            padding-left: 10%;
-        }
-        
-        .wrapper {
-            display: grid;
-            text-align: center;
-            grid-template-columns: 35% 35% 35%;
-            grid-gap: 20%;
+            padding-left: 8%;
         }
         
         #contact {
             background-color: #A1D0EA;
             display: flex;
-            padding-top: 4%;
-            padding-right: 10%;
-            padding-bottom: 10%;
-            padding-left: 10%;
+            padding-top: 5%;
+            padding-right: 5%;
+            padding-left: 5%;
+            padding-bottom: 5%;
         }
         
         #bottomPlate {
@@ -144,10 +151,10 @@
     </style>
 </head>
 
-<body>
+<body style="overflow-x: hidden;">
+    <div class="container-fluid">
 
-    <div style="padding-top: 1%">
-        <div class="row align-items-center justify-content-center">
+        <div class="row align-items-center justify-content-center" style="padding-top: 1%">
             <ul class="nav navbar text-center" style="width:100%">
                 <div class="col">
                     <a id="navigation" href="#" role="button" aria-haspopup="true" aria-expanded="false">Anze</a>
@@ -172,75 +179,87 @@
             </ul>
         </div>
 
-        <div id="statementPlate">
-            <div class="row justify-content-start">
-                <div class="col-4">
-                    <h2> Anze Liu </h2>
-                </div>
+        <div class="row align-items-center justify-content-center" id="statementPlate">
+            <div class="col-md-54%">
+                <h2 class="row justify-content-center"> Anze Liu </h2>
+                <h3 id="career" class="justify-content-start">Electrical Engineer, Computer Scientist, Artist</h3>
             </div>
-            <div class="row justify-content-start">
-                <div class="col-6">
-                    <h3> Engineer, Computer Scientist, Artist </h3>
-                </div>
-            </div>
-            <div class="col-md-6 offset-md-4">
+            <div class="col-md-4 offset-md-1">
                 <img src="static/images/Anze.png"></img>
             </div>
         </div>
 
-        <div id="introductionLetterBackground">
-            <div class="container-fluid" id="introductionLetter">
-                <div class="col-3" id="introductionLetterTitle" style="width:50%">
-                    <h3> Introduction </h3>
-                    <h3> Letter </h3>
+        <div class="row" id="introductionLetter">
+            <div class="col">
+                <div class="row">
+                    <div class="col-md-2 offset-md-1">
+                        <h3>Introduction</h3>
+                        <h3>Letter</h3>
+                    </div>
+                    <div class="col-md-8">
+                        <p> Hello! Welcome to my portfolio website. </p>
+                        <p> My name is Anze Liu. </p>
+                        <p> I am currently a fourth year undergraduate at UC Berkeley major in B.S. Electrical Engineering and Computer Sciences. </p>
+                        <p> I have experience and interest in software development, machine learning, 3D animated films, circuit design, and more! </p>
+                        <p> In my spare time, I wander in nature, read books, and dance ballet. </p>
+                    </div>
                 </div>
-                <div class="col-8" style="width:100%">
-                    <p> Hello! Welcome to my portfolio website. </p>
-                    <p> My name is Anze Liu. </p>
-                    <p> I am currently a fourth year undergraduate at UC Berkeley studying Electrical Engineering and Computer Sciences. </p>
-                    <p> I have experience and interest in software development, machine learning, 3D animated films, circuit design, and more! </p>
-                    <p> In my spare time, I wander in nature, read books, and dance ballet. </p>
-                </div>
-            </div>
 
-        </div>
-
-        <div id="skills">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-4">
-
-                </div>
-                <div class="col-4">
-
-                </div>
-            </div>
-            <div class="row align-items-center justify-content-center">
-                <div class="col-4">
-
-                </div>
-                <div class="col-4">
-
-                </div>
             </div>
         </div>
 
-        <div class="row" id="projects">
-            <div class="col-4">Computer Science</div>
-            <div class="col-4">3D Modeling & Animation</div>
-            <div class="col-4">Electrical Engineering</div>
+        <div class="row align-items-center justify-content-center">
+            <div class="col-md-4" id="area">
+                <h4> Programming Languages</h4>
+                <p> Java </p>
+                <p> Python </p>
+                <p> C / C++ </p>
+                <p> SQL </p>
+                <p> Javascript </p>
+                <p> HTML / CSS </p>
+            </div>
+            <div class="col-md-4" id="area">
+                <h4> Tools</h4>
+                <p> Scikit-learn </p>
+                <p> IBM TPF </p>
+                <p> MATLAB </p>
+                <p> Autodesk Maya </p>
+                <p> Raspberry Pi </p>
+                <p> LTspice</p>
+            </div>
         </div>
 
-
-        <div class="row" id="contact">
-            <div class="col-6">
-                <h3> Contact </h3>
+        <div class="row align-items-center justify-content-center" id="projects">
+            <div class="col-4" id="ComputerScience">
+                <h4>Computer Science</h4>
             </div>
-            <div class="col-6">
-                <h3> More Relevant Sites </h3>
+            <div class="col-4" id="3DModelingAnimation">
+                <h4>
+                    3D Modeling & Animation
+                </h4>
+            </div>
+            <div class="col-4" id="ElectricalEngineering">
+                <h4>
+                    Electrical Engineering
+                </h4>
             </div>
         </div>
 
-        <div class="row text-center" id="bottomPlate">
+        <div id="contact" class="row align-items-center justify-content-center">
+            <div class="col-md-4">
+                <h4> Contact </h4>
+                <p> More Relevant Sites </p>
+            </div>
+
+            <div class="col-md-4">
+                <h4> More Relevant Sites </h4>
+                <a href="#">
+                    <p> Resume </p>
+                </a>
+            </div>
+        </div>
+
+        <div class="row align-items-center justify-content-center" id="bottomPlate">
             <div class="col">
                 <p> Website deisgned by Anze Liu </p>
             </div>
